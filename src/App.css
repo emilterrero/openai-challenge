@@ -1,0 +1,21 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+}
+
+#input {
+    display: block;
+    width: 400px;
+    height: 120px;
+}
+
+.prompt-container {
+    display: flex;
+    flex-direction: column;
+}
