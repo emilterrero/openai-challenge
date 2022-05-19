@@ -11,7 +11,7 @@ const App = () => {
             fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
                 method: "POST",
                 headers: {
-                    "Access-Controll-Allow-Origin": "*",
+                    "Access-Controll-Allow-Origin": "https://etopenaichallenge.netlify.app/",
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
                 },
