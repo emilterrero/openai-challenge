@@ -4,7 +4,6 @@ import {useState} from 'react';
 const App = () => {
     const [text, setText] = useState('');
     const [prompts, setPrompts] = useState([]);
-    const [fullRes, setRes] = useState({
         'req': '',
         'res': ''
     });
