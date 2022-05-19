@@ -1,12 +1,16 @@
 .App {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
     height: 100vh;
 }
 
-.content {
+.input-field {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
 }
 
 #input {
@@ -15,7 +19,14 @@
     height: 120px;
 }
 
-.prompt-container {
-    display: flex;
-    flex-direction: column;
+.responses {
+    overflow: scroll;
+    width: 70vw;
+}
+
+.response {
+    background-color: gainsboro;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
 }
