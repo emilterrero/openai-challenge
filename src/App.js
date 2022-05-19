@@ -4,10 +4,6 @@ import {useState} from 'react';
 const App = () => {
     const [text, setText] = useState('');
     const [prompts, setPrompts] = useState([]);
-        'req': '',
-        'res': ''
-    });
-
 
     const formSubmit = (e) => {
         e.preventDefault()
