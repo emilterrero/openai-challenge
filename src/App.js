@@ -44,18 +44,18 @@ const App = () => {
     return (
         <div className="App">
         <h1>Open AI App</h1>
+        <p>Ask the OpenAI to tell you a story about anything!</p>
 
-        <div className='input-field'>
+        <div className='input-div'>
 
         <form onSubmit={formSubmit} id='submit-form'>
         <textarea type='text' id='input' onChange={(e) => setText(e.currentTarget.value)} value={text} />
-        <button className='submit=btn' type='submit'>Submit
+        <button className='submit-btn' type='submit'>Submit
         </button>
         </form>
 
         </div>
         <div className='responses'>
-        </div>
 
         {prompts.map((prompt) => {
             return (
@@ -68,6 +68,7 @@ const App = () => {
 
             )
         })}
+        </div>
 
         </div>
     );
