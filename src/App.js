@@ -4,7 +4,10 @@ import {useState} from 'react';
 const App = () => {
     const [text, setText] = useState('');
     const [prompts, setPrompts] = useState([]);
-    const [fullRes, setRes] = useState({});
+    const [fullRes, setRes] = useState({
+        'req': '',
+        'res': ''
+    });
 
 
     const formSubmit = (e) => {
@@ -30,7 +33,10 @@ const App = () => {
             )
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
+                    let fullResponse = {
+                        "req": `${text}`,
+                        "res": `${data.choices[0].text}`}
+                    setPrompts([fullResponse, ...prompts])
                 })
             setText('')
 
@@ -55,6 +61,18 @@ const App = () => {
         </div>
         <div className='responses'>
         </div>
+
+        {prompts.map((prompt) => {
+            return (
+                <div className='response'>
+                <h4>Prompt</h4>
+                <p>{prompt.req}</p>
+                <h4>Response</h4>
+                <p>{prompt.res}</p>
+                </div>
+
+            )
+        })}
 
         </div>
     );

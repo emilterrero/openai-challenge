@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 .App {
     display: flex;
     flex-direction: column;
@@ -26,6 +30,7 @@
 
 .response {
     background-color: gainsboro;
+    width: 70vw;
     padding: 5px;
     margin: 5px;
     border-radius: 10px;
